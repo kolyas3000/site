@@ -1,0 +1,9 @@
+# backend/.gitignore
+
+# Ignore Python virtual environment
+.env
+.venv
+__pycache__
+
+# Ignore Django secret key and other sensitive information
+#backend/settings.py
