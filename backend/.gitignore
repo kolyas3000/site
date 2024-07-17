@@ -7,3 +7,6 @@ __pycache__
 
 # Ignore Django secret key and other sensitive information
 #backend/settings.py
+
+# db
+db.sqlite3
