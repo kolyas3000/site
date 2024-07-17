@@ -20,6 +20,7 @@ export const AuthProvider = ({children}) => {
         },
       });
 
+
     let login = async (e) => {
         try{
             let response = await api.post('token/', {
@@ -36,6 +37,21 @@ export const AuthProvider = ({children}) => {
             }
         }catch (error){
             console.log(error);
+        }
+    }
+
+    let register = async (e) => {
+        try{
+            let response = await api.post('register/', {
+                username: e.target.username.value,
+                password: e.target.password.value
+            });
+            if (response.status === 201){
+                navigate('/login');
+            }
+        }catch (error){
+            console.log(error);
+            alert("Try again");
         }
     }
 
@@ -65,6 +81,7 @@ export const AuthProvider = ({children}) => {
 
     let contextData ={
         login : login, 
+        register : register,
         logout : logout,
         tokens : tokens,
         user : user,
@@ -81,7 +98,8 @@ export const AuthProvider = ({children}) => {
 
             return () => clearInterval(interval);
         }
-    }, [tokens, refreshToken]);
+    }, [tokens, refreshToken]); 
+    
 
 
     return (

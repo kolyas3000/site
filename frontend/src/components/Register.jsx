@@ -3,11 +3,16 @@ import AuthContext from '../context/Auth';
 
 const Register = () => {
 
+    const { register } = useContext(AuthContext);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        register(e);
+    };
 
     return (
         <div>
             <h2>Register</h2>
-        <form >
+        <form onSubmit={handleSubmit}>
             <div>
                 <input
                     type="text"
