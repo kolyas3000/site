@@ -15,7 +15,7 @@ const Header = () => {
                 <Link to="/login" className="header-link">Login</Link>
             )}
             <span> | </span>
-            <Link to="/register" className="header-link">Register</Link>
+            <Link to="/register" onClick={logout} className="header-link">Register</Link>
         </header>
     );
 }
