@@ -79,15 +79,6 @@ export const AuthProvider = ({children}) => {
         }
     }
 
-    let contextData ={
-        login : login, 
-        register : register,
-        logout : logout,
-        tokens : tokens,
-        user : user,
-
-    }
-
     useEffect(() => {
         if (tokens) {
             const interval = setInterval(() => {
@@ -100,7 +91,14 @@ export const AuthProvider = ({children}) => {
         }
     }, [tokens, refreshToken]); 
     
+    let contextData ={
+        login : login, 
+        register : register,
+        logout : logout,
+        tokens : tokens,
+        user : user,
 
+    }
 
     return (
         <AuthContext.Provider value={contextData}>

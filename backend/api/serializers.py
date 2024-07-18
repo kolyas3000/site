@@ -2,6 +2,7 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 from django.contrib.auth.models import User
 from rest_framework import serializers
+from .models import Todo
 
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
@@ -27,3 +28,12 @@ class UserSerializer(serializers.ModelSerializer):
             password=validated_data['password']
         )
         return user
+    
+    
+class TodoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Todo
+        fields = ['id', 'user', 'title', 'completed']
+        read_only_fields = ['id', 'user']
+
+

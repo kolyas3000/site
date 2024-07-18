@@ -1,10 +1,11 @@
 import React from "react";
+import TodoList from "./TodoList";
 
 
 const MainPage = () => {
 
     return (
-        <>Main</>
+        <TodoList/>
     )
 }
 export default MainPage;
