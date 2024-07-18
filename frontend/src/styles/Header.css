@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ed6c8a; /* Розовый цвет */
+    color: white;
+    width: 50%; /* Уменьшаем ширину */
+    margin: 0 auto; /* Центрируем */
+    border-radius: 5px;
+}
+
+.header-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; /* Увеличиваем отступы между ссылками */
+}
+
+.header-link:hover {
+    text-decoration: underline;
+}

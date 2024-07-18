@@ -1,7 +1,7 @@
-// src/components/TodoList.js
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import AuthContext from '../context/Auth';
+import '../styles/TodoList.css';
 
 const TodoList = () => {
     const [todos, setTodos] = useState([]);
@@ -11,12 +11,10 @@ const TodoList = () => {
     const api = axios.create({
         baseURL: 'http://127.0.0.1:8000/api/',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${user.tokens.access}`
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${user.tokens.access}`
         },
-      });
-    
-
+    });
 
     useEffect(() => {
         fetchTodos();
@@ -45,18 +43,19 @@ const TodoList = () => {
     };
 
     return (
-        <div>
+        <div className="todo-container">
             <h1>Todo List</h1>
             <input
                 type="text"
                 value={newTodo}
                 onChange={(e) => setNewTodo(e.target.value)}
                 placeholder="Add new todo"
+                className="todo-input"
             />
-            <button onClick={addTodo}>Add</button>
-            <ul>
+            <button onClick={addTodo} className="add-button">Add</button>
+            <ul className="todo-list">
                 {todos.map(todo => (
-                    <li key={todo.id}>
+                    <li key={todo.id} className="todo-item">
                         <input
                             type="checkbox"
                             checked={todo.completed}
@@ -65,7 +64,7 @@ const TodoList = () => {
                         <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
                             {todo.title}
                         </span>
-                        <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+                        <button onClick={() => deleteTodo(todo.id)} className="delete-button">Delete</button>
                     </li>
                 ))}
             </ul>

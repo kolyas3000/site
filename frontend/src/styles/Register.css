@@ -1,0 +1,30 @@
+.register-container {
+    max-width: 300px;
+    margin: 20px auto; /* Центрируем и добавляем отступ сверху */
+    padding: 20px;
+    border: 1px solid #FFD1DC; /* Розовый цвет */
+    border-radius: 10px;
+    background-color: #FFF; /* Белый цвет */
+}
+
+.input-field {
+    width: calc(100% - 22px); /* Учитываем padding */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #FFD1DC; /* Розовый цвет */
+    border-radius: 5px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFD1DC; /* Розовый цвет */
+    color: white;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #FFB6C1; /* Светло-розовый цвет */
+}

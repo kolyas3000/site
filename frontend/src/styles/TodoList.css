@@ -1,0 +1,58 @@
+.todo-container {
+    max-width: 600px;
+    margin: 20px auto; /* Центрируем и добавляем отступ сверху */
+    padding: 20px;
+    border: 1px solid #FFD1DC; /* Розовый цвет */
+    border-radius: 10px;
+    background-color: #FFF; /* Белый цвет */
+}
+
+.todo-input {
+    width: calc(100% - 22px); /* Учитываем padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #FFD1DC; /* Розовый цвет */
+    border-radius: 5px;
+}
+
+.add-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9eb5; /* Розовый цвет */
+    color: white;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #FFB6C1; /* Светло-розовый цвет */
+}
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Распределяем элементы */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #FFD1DC; /* Розовый цвет */
+    border-radius: 5px;
+    background-color: #FFF0F5; /* Светло-розовый цвет */
+}
+
+.delete-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF69B4; /* Ярко-розовый цвет */
+    color: white;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #FF1493; /* Темно-розовый цвет */
+}
